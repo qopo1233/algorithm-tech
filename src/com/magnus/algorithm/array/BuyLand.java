@@ -45,7 +45,7 @@ public class BuyLand {
             int horizontalCut = 0;
             for (int i = 0; i < n; i++) {
                 horizontalCut += horizontal[i];
-                result = Math.min(result, Math.abs(sum - 3horizontalCut));
+                result = Math.min(result, Math.abs(sum - horizontalCut));
             }
 
             int verticalCut = 0;
