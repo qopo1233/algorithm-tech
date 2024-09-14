@@ -1,4 +1,6 @@
-package com.magnus.algorithm;
+package com.magnus.algorithm.linkedlist;
+
+import com.magnus.algorithm.ListNode;
 
 /**
  * @ClassName ReverseList
