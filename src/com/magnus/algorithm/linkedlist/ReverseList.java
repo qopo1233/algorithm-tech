@@ -4,7 +4,7 @@ import com.magnus.algorithm.ListNode;
 
 /**
  * @ClassName ReverseList
- * @Description TODO
+ * @Description
  * @Author yangchuanhua1
  * @Date 2024/8/7 16:18
  */
@@ -25,5 +25,9 @@ public class ReverseList {
             curr = next;
         }
         return prev;
+    }
+
+    public ListNode reverseList1(ListNode head) {
+
     }
 }
