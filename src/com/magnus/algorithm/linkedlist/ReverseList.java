@@ -28,6 +28,6 @@ public class ReverseList {
     }
 
     public ListNode reverseList1(ListNode head) {
-
+        return null;
     }
 }
