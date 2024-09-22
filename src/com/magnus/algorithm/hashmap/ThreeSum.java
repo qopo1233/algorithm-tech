@@ -30,7 +30,7 @@ public class ThreeSum {
             int num = nums[i];
             // 如果第一个就大于 0 不会有三个数加起来为 0 的情况
             if (num > 0) {
-                return result;
+                break;
             }
             // 重复的情况
             if (i > 0 && nums[i] == nums[i - 1]) {
