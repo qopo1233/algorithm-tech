@@ -46,17 +46,36 @@ public class KMP {
      * @return
      */
     private static int[] getNext(char[] b, int m) {
+        // 初始化
+        // 处理前后缀不相同的情况
+        // 处理前后缀相同的情况
         int[] next = new int[m];
-        int k = -1;
+        int j = -1;
         next[0] = -1;
         for (int i = 1; i < m; i++) {
-            while (k != -1 && b[k+1] != b[i]) {
-                k = next[k];
+            while (j != -1 && b[j+1] != b[i]) {
+                j = next[j];
             }
-            if (b[k+1] == b[i]) {
-                ++k;
+            if (b[j + 1] == b[i]) {
+                ++j;
             }
-            next[i] = k;
+            next[i] = j;
+        }
+        return next;
+    }
+
+    private int[] getNext2(char[] b, int m) {
+        int[] next = new int[m];
+        int j = -1;
+        next[0] = -1;
+        for (int i = 1; i < m; i++) {
+            while (j != -1 && b[j + 1] != b[i]) {
+                j = next[j];
+            }
+            if (b[j + 1] == b[i]) {
+                ++j;
+            }
+            next[j] = j;
         }
         return next;
     }
